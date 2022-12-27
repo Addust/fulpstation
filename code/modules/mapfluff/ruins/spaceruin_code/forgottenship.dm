@@ -102,6 +102,36 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	icon_state = "syndie-ship"
 	ambientsounds = list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg')
 
+/area/ruin/space/has_grav/syndicate_forgotten_asteroidbase
+	name = "Forgotten Asteroid Base"
+	icon_state = "syndie-ship"
+	ambientsounds = list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/ruin/space/has_grav/syndicate_forgotten_asteroidbase/medbay
+	name = "Forgotten Asteroid Base Medical"
+	icon_state = "syndie-ship"
+	ambientsounds = list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/ruin/space/has_grav/syndicate_forgotten_asteroidbase/engineering
+	name = "Forgotten Asteroid Base Engineering"
+	icon_state = "syndie-ship"
+	ambientsounds = list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/ruin/space/has_grav/syndicate_forgotten_asteroidbase/communications
+	name = "Forgotten Asteroid Base Telecomms"
+	icon_state = "syndie-ship"
+	ambientsounds = list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/ruin/space/has_grav/syndicate_forgotten_asteroidbase/research
+	name = "Forgotten Asteroid Base Research"
+	icon_state = "syndie-ship"
+	ambientsounds = list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/ruin/space/has_grav/syndicate_forgotten_asteroidbase/engineering/atmospherics
+	name = "Forgotten Asteroid Base Atmospherics"
+	icon_state = "syndie-ship"
+	ambientsounds = list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg')
+
 
 //Special NT NPCs
 
