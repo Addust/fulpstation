@@ -88,7 +88,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 
 /obj/item/storage/box/firingpins/syndicate
 	name = "box of syndicate firing pins"
-	desc = "A box full of special firing pins that only allow those equipped with a Syndicate implant to fire weapons equipped with them.."
+	desc = "A box full of special firing pins that only allow those equipped with a Syndicate implant to fire weapons equipped with them."
 
 /obj/item/storage/box/firingpins/syndicate/PopulateContents()
 	for(var/i in 1 to 5)
