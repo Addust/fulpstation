@@ -242,3 +242,73 @@
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
 	id_trim = /datum/id_trim/battlecruiser/captain
+
+
+//Forgotten syndicate ship
+
+/obj/effect/mob_spawn/ghost_role/human/syndicatespace
+	name = "syndicate stasis sleeper"
+	desc = "A Syndicate long-term stasis sleeper, trying to wake its occupant. You can see a syndicate operative's uniform beneath the glass."
+	show_flavor = FALSE
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper_s"
+	prompt_name = "cybersun crew"
+	you_are_text = "You are a syndicate operative on old ship, drifting through the void."
+	flavour_text = "Your ship has drifted into an asteroid field and taken plenty of damage. Repair the ship and restore it to its former glory."
+	important_text = "Obey your captain's orders. DO NOT ABANDON THE SHIP."
+	outfit = /datum/outfit/syndicatespace/syndicrew
+	spawner_job_path = /datum/job/syndicate_cybersun
+
+/obj/effect/mob_spawn/ghost_role/human/syndicatespace/special(mob/living/new_spawn)
+	. = ..()
+	new_spawn.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
+	var/datum/job/spawn_job = SSjob.GetJobType(spawner_job_path)
+	var/policy = get_policy(spawn_job.policy_index)
+	if(policy)
+		to_chat(new_spawn, span_bold("[policy]"))
+
+/obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain
+	name = "syndicate stasis sleeper"
+	desc = "A Syndicate long-term stasis sleeper, trying to wake its occupant. You can see a syndicate officer's uniform beneath the glass."
+	prompt_name = "a cybersun captain"
+	you_are_text = "You are the captain of a cruiser rusting away in enemy territory."
+	flavour_text = "Your ship has drifted to a halt in the midst of an asteroid field, and there's definitely at least one hull breach."
+	important_text = "Protect the ship and the secret documents in your backpack with your own life. DO NOT GO TO THE STATION."
+	outfit = /datum/outfit/syndicatespace/syndicaptain
+	spawner_job_path = /datum/job/syndicate_cybersun_captain
+
+/obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain/Destroy()
+	new /obj/structure/fluff/empty_sleeper/syndicate/captain(get_turf(src))
+	return ..()
+
+/datum/outfit/syndicatespace
+	name = "Syndicate Ship Base"
+	uniform = /obj/item/clothing/under/syndicate/combat
+	ears = /obj/item/radio/headset/syndicate/alt
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/combat
+	back = /obj/item/storage/backpack
+	belt = /obj/item/storage/belt/military/assault
+	id = /obj/item/card/id/advanced/black/syndicate_command/crew_id
+	implants = list(/obj/item/implant/weapons_auth)
+
+/datum/outfit/syndicatespace/post_equip(mob/living/carbon/human/syndie_scum)
+	syndie_scum.faction |= ROLE_SYNDICATE
+
+/datum/outfit/syndicatespace/syndicrew
+	name = "Syndicate Ship Crew Member"
+	glasses = /obj/item/clothing/glasses/night
+	mask = /obj/item/clothing/mask/gas/syndicate
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol
+	r_pocket = /obj/item/knife/combat/survival
+	backpack_contents = list(/obj/item/storage/box/survival/syndie)
+
+/datum/outfit/syndicatespace/syndicaptain
+	name = "Syndicate Ship Captain"
+	uniform = /obj/item/clothing/under/syndicate/combat
+	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
+	head = /obj/item/clothing/head/hos/beret/syndicate
+	ears = /obj/item/radio/headset/syndicate/alt/leader
+	r_pocket = /obj/item/knife/combat/survival
+	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
+	backpack_contents = list(/obj/item/storage/box/survival/syndie, /obj/item/documents/syndicate/red, /obj/item/gun/ballistic/automatic/pistol/aps)
