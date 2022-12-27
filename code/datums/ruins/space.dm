@@ -312,7 +312,7 @@
 	id = "forgottenship"
 	suffix = "forgottenship.dmm"
 	name = "Syndicate Forgotten Ship"
-	description = "Seemingly abandoned ship went of course right into NT controlled space. It seems that malfunction caused most systems to turn off, except for sleepers."
+	description = "A Syndicate cruiser, slowly rusting away in the abyss as its stasis sleepers hum away, attempting to re-awaken its crew."
 
 /datum/map_template/ruin/space/hellfactory
 	id = "hellfactory"
