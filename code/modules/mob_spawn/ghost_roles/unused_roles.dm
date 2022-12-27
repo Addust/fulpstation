@@ -274,9 +274,9 @@
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain
 	name = "Syndicate Ship Captain"
 	prompt_name = "a cybersun captain"
-	you_are_text = "You are the captain of an old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Command your crew and turn your ship into the most protected fortress."
-	important_text = "Protect the ship and secret documents in your backpack with your own life."
+	you_are_text = "You are the captain of a cruiser rusting away in enemy territory."
+	flavour_text = "Your ship has drifted to a halt in the midst of an asteroid field, and there's definitely at least one hull breach."
+	important_text = "Protect the ship and the secret documents in your backpack with your own life. DO NOT GO TO THE STATION."
 	outfit = /datum/outfit/syndicatespace/syndicaptain
 	spawner_job_path = /datum/job/syndicate_cybersun_captain
 
@@ -304,6 +304,7 @@
 	mask = /obj/item/clothing/mask/gas/syndicate
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
 	r_pocket = /obj/item/knife/combat/survival
+	backpack_contents = list(/obj/item/storage/box/survival/syndie)
 
 /datum/outfit/syndicatespace/syndicaptain
 	name = "Syndicate Ship Captain"
@@ -313,4 +314,4 @@
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	r_pocket = /obj/item/knife/combat/survival
 	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
-	backpack_contents = list(/obj/item/documents/syndicate/red, /obj/item/paper/fluff/ruins/forgottenship/password, /obj/item/gun/ballistic/automatic/pistol/aps)
+	backpack_contents = list(/obj/item/storage/box/survival/syndie, /obj/item/documents/syndicate/red, /obj/item/gun/ballistic/automatic/pistol/aps)
