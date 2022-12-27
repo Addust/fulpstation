@@ -257,9 +257,9 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "cybersun crew"
-	you_are_text = "You are a syndicate operative on old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Fix the ship, find a way to power it and follow your captain's orders."
-	important_text = "Obey orders given by your captain. DO NOT let the ship fall into enemy hands."
+	you_are_text = "You are a syndicate operative on old ship, drifting through the void."
+	flavour_text = "Your ship has drifted into an asteroid field and taken a good beating. Repair the ship and restore it to its former glory."
+	important_text = "Obey your captain's orders. DO NOT ABANDON THE SHIP."
 	outfit = /datum/outfit/syndicatespace/syndicrew
 	spawner_job_path = /datum/job/syndicate_cybersun
 
